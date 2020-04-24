@@ -64,7 +64,7 @@
 							</tr>
 					</tbody>
 				</table>
-				<%= form_for [@book, @book_comment] do |f| %>
+				<%= form_with model:[@book, @book_comment], date: {remote: true} do |f| %>
 					<%= f.text_area :comment %>
 					<%= f.submit "送信", class:"btn btn-lg btn-base-1 pull-right" %>
 				<% end %>
